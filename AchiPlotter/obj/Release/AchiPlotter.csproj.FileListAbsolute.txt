@@ -1,0 +1,12 @@
+C:\Users\vanth\Desktop\AchiPlotGui\AchiPlotter\bin\Release\Achi_Plot_Gui.exe.config
+C:\Users\vanth\Desktop\AchiPlotGui\AchiPlotter\bin\Release\Achi_Plot_Gui.exe
+C:\Users\vanth\Desktop\AchiPlotGui\AchiPlotter\bin\Release\Achi_Plot_Gui.pdb
+C:\Users\vanth\Desktop\AchiPlotGui\AchiPlotter\obj\Release\AchiPlotter.csproj.AssemblyReference.cache
+C:\Users\vanth\Desktop\AchiPlotGui\AchiPlotter\obj\Release\SimpleChiaPlotter.FrmAbout.resources
+C:\Users\vanth\Desktop\AchiPlotGui\AchiPlotter\obj\Release\SimpleChiaPlotter.FrmPlotter.resources
+C:\Users\vanth\Desktop\AchiPlotGui\AchiPlotter\obj\Release\SimpleChiaPlotter.FrmSettings.resources
+C:\Users\vanth\Desktop\AchiPlotGui\AchiPlotter\obj\Release\AchiPlotter.Properties.Resources.resources
+C:\Users\vanth\Desktop\AchiPlotGui\AchiPlotter\obj\Release\AchiPlotter.csproj.GenerateResource.cache
+C:\Users\vanth\Desktop\AchiPlotGui\AchiPlotter\obj\Release\AchiPlotter.csproj.CoreCompileInputs.cache
+C:\Users\vanth\Desktop\AchiPlotGui\AchiPlotter\obj\Release\Achi_Plot_Gui.exe
+C:\Users\vanth\Desktop\AchiPlotGui\AchiPlotter\obj\Release\Achi_Plot_Gui.pdb
