@@ -1,6 +1,13 @@
 # Achi Plotter GUI
-![Alt text](https://raw.githubusercontent.com/vanthoi/Achi-Plot-Gui/main/Achi_Plotter.png)
 Achi Plotter GUI uAlternate MADMAX version of Achi Plot
+
+GUI Plotter
+
+![Alt text](https://raw.githubusercontent.com/vanthoi/Achi-Plot-Gui/main/Achi_Plotter.png)
+
+Setting:
+
+![Alt text](https://raw.githubusercontent.com/vanthoi/Achi-Plot-Gui/main/Achi_Plotter_Settings.png)
 
 Operating System: Windows 10 (64 bit)
 
