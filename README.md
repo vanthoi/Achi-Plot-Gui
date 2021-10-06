@@ -1,12 +1,18 @@
-# SimpleChiaMADMAXPlotterGUI
-Alternate MADMAX version of my SimpleChiaPlotter
+# Achi Plotter GUI
+Achi Plotter GUI uAlternate MADMAX version of Achi Plot
+
+GUI Plotter
+
+![Alt text](https://raw.githubusercontent.com/vanthoi/Achi-Plot-Gui/main/Achi_Plotter.png)
+
+Setting:
+
+![Alt text](https://raw.githubusercontent.com/vanthoi/Achi-Plot-Gui/main/Achi_Plotter_Settings.png)
 
 Operating System: Windows 10 (64 bit)
 
-Pre-built exe is here: https://github.com/xTheJakalx/SimpleChiaMADMAXPlotterGUI/releases
+Achi Plotter GUI use source is here: https://github.com/xTheJakalx/SimpleChiaMADMAXPlotterGUI
 
-Have a look at the wiki for more details - https://github.com/xTheJakalx/SimpleChiaMADMAXPlotterGUI/wiki
-
-Basic install instructions - https://github.com/xTheJakalx/SimpleChiaMADMAXPlotterGUI/wiki/Install-Instructions
-
-Added new arguments for MADMAX plotter 0.0.7
+If you like this project, you can donate to me:
+Achi: `xach1zs46annmu37vdmj6t9vht0qxa60kjqzulrfccy783n5agfhqttks2zkvt5`
+Chia: `cac1e8cuv3cyzvcalwmvxsxzw3aj2rxksq4wlw9g90ykaa273xk30duqd6nnf4`
