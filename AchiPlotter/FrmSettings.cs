@@ -17,7 +17,7 @@ namespace SimpleChiaPlotter
     {
         // create achi class and MyIni class
         private Achi achi = new Achi();
-        IniFile MyIni = new IniFile("AchiPlotter.ini");
+        IniFile MyIni = new IniFile("Achi_Plotter.ini");
 
         public FrmSettings()
         {

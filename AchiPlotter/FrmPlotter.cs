@@ -14,7 +14,7 @@ namespace SimpleChiaPlotter
 {
     public partial class FrmPlotter : Form
     {
-        private Achi chia = new Achi();
+        private Achi achi = new Achi();
         IniFile MyIni = new IniFile("Achi_Plotter.ini");
 
         public FrmPlotter()
@@ -77,7 +77,7 @@ namespace SimpleChiaPlotter
                 // ini file does not exist so create one with defaults
                 CreateConfig();
             }
-            var chia = new Achi
+            var achi = new Achi
             {
                 Directory = MyIni.Read("Directory"),
                 Executable = MyIni.Read("Executable"),
@@ -98,7 +98,7 @@ namespace SimpleChiaPlotter
                 NFTEnabled = bool.Parse(MyIni.Read("NFTEnabled")),
                 PoolKeyEnabled = bool.Parse(MyIni.Read("PoolKeyEnabled"))
             };
-            if (chia.Directory == "")
+            if (achi.Directory == "")
             {
                 // if madmax directory is null in ini file open the settings form
                 MessageBox.Show("Please configure Achi_Plot Directory!", "Urgent!");
@@ -113,7 +113,7 @@ namespace SimpleChiaPlotter
         private void CreateConfig()
         {
             MyIni.Write("Directory", null);
-            MyIni.Write("Executable", "chia_plot.exe");
+            MyIni.Write("Executable", "achi_plot.exe");
             MyIni.Write("Buckets", "256");
             MyIni.Write("Buckets3", "256");
             MyIni.Write("Threads", "4");
@@ -137,7 +137,7 @@ namespace SimpleChiaPlotter
         private Achi SaveConfig()
         {
             // get settings from checkboxes and textboxes
-            var chia = new Achi
+            var achi = new Achi
             {
                 Directory = MyIni.Read("Directory"),
                 Executable = MyIni.Read("Executable"),
@@ -151,7 +151,7 @@ namespace SimpleChiaPlotter
                 TempDir1 = textBoxTempDir1.Text,
                 TempDir2 = textBoxTempDir2.Text,
                 TargetDir = textBoxFinalDir.Text,
-                // setup bools in the chia class
+                // setup bools in the achi class
                 TempToggle = checkBoxSwap.CheckState == CheckState.Checked,
                 WaitForCopy = checkBoxWait.CheckState == CheckState.Checked,
                 TempDir2Enabled = checkBox2ndTempDir.CheckState == CheckState.Checked,
@@ -160,27 +160,27 @@ namespace SimpleChiaPlotter
                 PoolKeyEnabled = checkBoxPublicPoolKey.CheckState == CheckState.Checked
             };
             // save settings to ini file
-            MyIni.Write("Directory", chia.Directory);
-            MyIni.Write("Executable", chia.Executable);
-            MyIni.Write("Threads", chia.Threads);
-            MyIni.Write("Buckets", chia.Buckets);
-            MyIni.Write("Buckets3", chia.Buckets3);
-            MyIni.Write("TotalPlots", chia.TotalPlots);
-            MyIni.Write("FarmerPublicKey", chia.FarmerPublicKey);
-            MyIni.Write("PoolPublicKey", chia.PoolPublicKey);
-            MyIni.Write("TempDir1", chia.TempDir1);
-            MyIni.Write("TempDir2", chia.TempDir2);
-            MyIni.Write("TargetDir", chia.TargetDir);
-            MyIni.Write("NFTAddress", chia.NFTAddress);
+            MyIni.Write("Directory", achi.Directory);
+            MyIni.Write("Executable", achi.Executable);
+            MyIni.Write("Threads", achi.Threads);
+            MyIni.Write("Buckets", achi.Buckets);
+            MyIni.Write("Buckets3", achi.Buckets3);
+            MyIni.Write("TotalPlots", achi.TotalPlots);
+            MyIni.Write("FarmerPublicKey", achi.FarmerPublicKey);
+            MyIni.Write("PoolPublicKey", achi.PoolPublicKey);
+            MyIni.Write("TempDir1", achi.TempDir1);
+            MyIni.Write("TempDir2", achi.TempDir2);
+            MyIni.Write("TargetDir", achi.TargetDir);
+            MyIni.Write("NFTAddress", achi.NFTAddress);
             // save bools to the ini file
-            MyIni.Write("TempToggle", chia.TempToggle.ToString());
-            MyIni.Write("WaitForCopy", chia.WaitForCopy.ToString());
-            MyIni.Write("TempDir2Enabled", chia.TempDir2Enabled.ToString());
-            MyIni.Write("EnableBuckets3", chia.EnableBuckets3.ToString());
-            MyIni.Write("NFTEnabled", chia.NFTEnabled.ToString());
-            MyIni.Write("PoolKeyEnabled", chia.PoolKeyEnabled.ToString());
+            MyIni.Write("TempToggle", achi.TempToggle.ToString());
+            MyIni.Write("WaitForCopy", achi.WaitForCopy.ToString());
+            MyIni.Write("TempDir2Enabled", achi.TempDir2Enabled.ToString());
+            MyIni.Write("EnableBuckets3", achi.EnableBuckets3.ToString());
+            MyIni.Write("NFTEnabled", achi.NFTEnabled.ToString());
+            MyIni.Write("PoolKeyEnabled", achi.PoolKeyEnabled.ToString());
 
-            return chia;
+            return achi;
         }
         /// <summary>
         /// Form Menu
@@ -213,8 +213,8 @@ namespace SimpleChiaPlotter
         /// </summary>
         private void btnPlot_Click(object sender, EventArgs e)
         {
-            // get chia class from current settings (textboxes and checkboxes)
-            var chia = SaveConfig();
+            // get achi class from current settings (textboxes and checkboxes)
+            var achi = SaveConfig();
             if (textBoxTempDir1.Text == "" || textBoxFinalDir.Text == "" || (checkBox2ndTempDir.Checked == true && textBoxTempDir2.Text == ""))
             {
                     MessageBox.Show("Please configure plotting directories!", "Urgent!");
@@ -240,7 +240,7 @@ namespace SimpleChiaPlotter
                 if (checkBoxWait.Checked) { wait = true; }
                 // check for NFT address
                 if (checkBoxNFTAddress.Checked) { NFTAddress = true; }
-                plotter.Run(chia, tempDir2, wait, tempToggle, NFTAddress);
+                plotter.Run(achi, tempDir2, wait, tempToggle, NFTAddress);
             }
 
         }
@@ -257,10 +257,10 @@ namespace SimpleChiaPlotter
 
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
-                    chia.TempDir1 = fbd.SelectedPath + "\\";
+                    achi.TempDir1 = fbd.SelectedPath + "\\";
                     textBoxTempDir1.Text = fbd.SelectedPath + "\\";
                     // save tempdir1 setting
-                    MyIni.Write("TempDir1", chia.TempDir1);
+                    MyIni.Write("TempDir1", achi.TempDir1);
                     LoadConfig();
                 }
             }
@@ -279,10 +279,10 @@ namespace SimpleChiaPlotter
 
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
-                    chia.TempDir2 = fbd.SelectedPath + "\\";
+                    achi.TempDir2 = fbd.SelectedPath + "\\";
                     textBoxTempDir2.Text = fbd.SelectedPath + "\\";
                     // save tempdir2 setting
-                    MyIni.Write("TempDir2", chia.TempDir2);
+                    MyIni.Write("TempDir2", achi.TempDir2);
                     LoadConfig();
                 }
             }
@@ -301,10 +301,10 @@ namespace SimpleChiaPlotter
 
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
-                    chia.TargetDir = fbd.SelectedPath + "\\";
+                    achi.TargetDir = fbd.SelectedPath + "\\";
                     textBoxFinalDir.Text = fbd.SelectedPath + "\\";
                     // save final dir setting
-                    MyIni.Write("TargetDir", chia.TargetDir);
+                    MyIni.Write("TargetDir", achi.TargetDir);
                     LoadConfig();
                 }
             }
